@@ -120,6 +120,7 @@ This repo includes `render.yaml` (Web Service + Postgres) and a Docker build tha
 3. When prompted for sync’d env vars, set:
    - `ADMIN_PASSWORD` — strong password for `/admin`
    - `CORS_ORIGINS` — leave blank for the first deploy, then set to `https://<your-service>.onrender.com` and redeploy (or update after the URL is assigned)
+   - `DATABASE_URL` is injected from the Blueprint Postgres service; paste Render’s URL as-is (`postgres://` or `postgresql://`) — the app rewrites it to `postgresql+psycopg2://`
 4. After deploy, open:
    - Site: `https://<your-service>.onrender.com`
    - Health: `/api/health`

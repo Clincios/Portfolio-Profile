@@ -34,9 +34,17 @@ class Settings(BaseSettings):
     @field_validator("database_url", mode="before")
     @classmethod
     def normalize_database_url(cls, value: str) -> str:
-        """Render and some hosts provide postgres://; SQLAlchemy expects postgresql://."""
-        if isinstance(value, str) and value.startswith("postgres://"):
-            return "postgresql://" + value[len("postgres://") :]
+        """Normalize host Postgres URLs for SQLAlchemy + psycopg2.
+
+        Render often provides postgres:// or postgresql://. Force the
+        postgresql+psycopg2:// driver so the installed binary is used.
+        """
+        if not isinstance(value, str):
+            return value
+        if value.startswith("postgres://"):
+            value = "postgresql://" + value[len("postgres://") :]
+        if value.startswith("postgresql://"):
+            value = "postgresql+psycopg2://" + value[len("postgresql://") :]
         return value
 
     @field_validator("cors_origins", mode="before")
