@@ -1,4 +1,4 @@
-# Alex Morgan — Senior Software Engineer Portfolio
+# Clinton Age — Senior Software Engineer Portfolio
 
 A modern, responsive, single-page portfolio website with a **FastAPI** backend, SQLite/PostgreSQL storage, contact form handling, and an admin panel for managing content.
 

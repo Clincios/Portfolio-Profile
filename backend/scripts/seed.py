@@ -45,7 +45,7 @@ def seed() -> None:
         if not db.query(Profile).first():
             db.add(
                 Profile(
-                    name="Alex Morgan",
+                    name="Clinton Age",
                     title="Senior Software Engineer",
                     tagline=(
                         "I build scalable, high-performance web applications and lead "
