@@ -37,6 +37,22 @@
 
     document.title = `${profile.name} | ${profile.title}`;
 
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription && profile.tagline) {
+      metaDescription.setAttribute(
+        'content',
+        `${profile.name} — ${profile.tagline}`.slice(0, 160)
+      );
+    }
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', `${profile.name} | ${profile.title}`);
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription && profile.tagline) {
+      ogDescription.setAttribute('content', profile.tagline);
+    }
+
     const aboutHeading = document.querySelector('.about__heading');
     if (aboutHeading) aboutHeading.textContent = profile.bio_heading;
 

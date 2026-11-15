@@ -3,15 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Senior Software Engineer Portfolio - Full-stack developer specializing in scalable web applications, cloud architecture, and engineering leadership.">
-    <title>Clinton Age | Senior Software Engineer</title>
+    <!-- Replace https://YOUR-DOMAIN.com with your live URL everywhere it appears (canonical, OG, JSON-LD, sitemap). -->
+    <title>Clinton Age | Web Developer &amp; Full-Stack Software Engineer</title>
+    <meta name="description" content="Clinton Age is a web developer and full-stack software engineer building fast, scalable websites and web applications. Hire for custom web development, APIs, and cloud architecture.">
+    <meta name="author" content="Clinton Age">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://YOUR-DOMAIN.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Clinton Age">
+    <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+    <meta property="og:title" content="Clinton Age | Web Developer &amp; Full-Stack Software Engineer">
+    <meta property="og:description" content="Clinton Age builds custom websites and scalable web applications. Full-stack web development, APIs, and cloud architecture.">
+    <meta property="og:image" content="https://YOUR-DOMAIN.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Clinton Age — Web Developer &amp; Full-Stack Software Engineer">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clinton Age | Web Developer &amp; Full-Stack Software Engineer">
+    <meta name="twitter:description" content="Clinton Age builds custom websites and scalable web applications. Full-stack web development, APIs, and cloud architecture.">
+    <meta name="twitter:image" content="https://YOUR-DOMAIN.com/assets/images/og-image.jpg">
+
+    <meta name="theme-color" content="#0b0f19">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0f19'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%23818cf8'%3ECA%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="assets/images/og-image.jpg">
+
     <link rel="stylesheet" href="css/styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://YOUR-DOMAIN.com/#website",
+          "url": "https://YOUR-DOMAIN.com/",
+          "name": "Clinton Age",
+          "description": "Portfolio and web development services by Clinton Age.",
+          "publisher": { "@id": "https://YOUR-DOMAIN.com/#person" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://YOUR-DOMAIN.com/#person",
+          "name": "Clinton Age",
+          "url": "https://YOUR-DOMAIN.com/",
+          "image": "https://YOUR-DOMAIN.com/assets/images/og-image.jpg",
+          "jobTitle": "Web Developer & Full-Stack Software Engineer",
+          "description": "Clinton Age is a web developer and full-stack software engineer specializing in custom websites, scalable web applications, APIs, and cloud architecture.",
+          "email": "mailto:alex.morgan@example.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Francisco",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://github.com",
+            "https://linkedin.com",
+            "https://twitter.com"
+          ],
+          "knowsAbout": [
+            "Web Development",
+            "Full-Stack Development",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Node.js",
+            "Python",
+            "Cloud Architecture",
+            "Software Engineering"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://YOUR-DOMAIN.com/#business",
+          "name": "Clinton Age Web Development",
+          "url": "https://YOUR-DOMAIN.com/",
+          "image": "https://YOUR-DOMAIN.com/assets/images/og-image.jpg",
+          "description": "Custom web development, full-stack applications, API design, and cloud architecture by Clinton Age.",
+          "provider": { "@id": "https://YOUR-DOMAIN.com/#person" },
+          "areaServed": ["San Francisco", "California", "United States", "Worldwide"],
+          "serviceType": [
+            "Web Development",
+            "Full-Stack Development",
+            "Website Design & Build",
+            "API Development",
+            "Cloud Architecture"
+          ],
+          "priceRange": "$$"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header class="header" id="header">
         <nav class="nav container" aria-label="Main navigation">
             <a href="#home" class="nav__logo" aria-label="Clinton Age home">
-                <span class="nav__logo-bracket">&lt;</span>Alex<span class="nav__logo-bracket">/&gt;</span>
+                <span class="nav__logo-bracket">&lt;</span>Clinton<span class="nav__logo-bracket">/&gt;</span>
             </a>
 
             <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
@@ -23,6 +115,7 @@
             <ul class="nav__menu" id="navMenu" role="menubar">
                 <li class="nav__item" role="none"><a href="#home" class="nav__link active" role="menuitem">Home</a></li>
                 <li class="nav__item" role="none"><a href="#about" class="nav__link" role="menuitem">About</a></li>
+                <li class="nav__item" role="none"><a href="#services" class="nav__link" role="menuitem">Services</a></li>
                 <li class="nav__item" role="none"><a href="#skills" class="nav__link" role="menuitem">Skills</a></li>
                 <li class="nav__item" role="none"><a href="#experience" class="nav__link" role="menuitem">Experience</a></li>
                 <li class="nav__item" role="none"><a href="#projects" class="nav__link" role="menuitem">Projects</a></li>
@@ -46,11 +139,11 @@
                     <p class="hero__greeting">Hello, I'm</p>
                     <h1 class="hero__title" id="heroTitle">Clinton Age</h1>
                     <p class="hero__role">
-                        Senior <span class="hero__typing" id="typingText" data-roles="Software Engineer,Full-Stack Developer,Cloud Architect,Engineering Lead"></span>
+                        Senior <span class="hero__typing" id="typingText" data-roles="Web Developer,Full-Stack Developer,Software Engineer,Cloud Architect"></span>
                         <span class="hero__cursor" aria-hidden="true">|</span>
                     </p>
                     <p class="hero__description">
-                        I build scalable, high-performance web applications and lead engineering teams to deliver products that millions of people rely on.
+                        I help businesses and founders with custom web development—fast, scalable websites and full-stack applications people rely on every day.
                     </p>
                     <div class="hero__actions">
                         <a href="#projects" class="btn btn--primary">View My Work</a>
@@ -95,16 +188,16 @@
                 <div class="about__grid">
                     <div class="about__image-wrapper">
                         <div class="about__image" role="img" aria-label="Clinton Age profile photo placeholder">
-                            <span class="about__image-text">AM</span>
+                            <span class="about__image-text">CA</span>
                         </div>
                     </div>
                     <div class="about__content">
-                        <h3 class="about__heading">Senior Software Engineer with 10+ years of experience</h3>
+                        <h3 class="about__heading">Web developer &amp; full-stack engineer with 10+ years of experience</h3>
                         <p class="about__text">
-                            I specialize in designing and building large-scale web applications that are fast, reliable, and maintainable. My work spans the full stack, from responsive frontends and robust APIs to cloud infrastructure and CI/CD pipelines.
+                            I'm Clinton Age, a web developer who designs and builds websites and large-scale web applications that are fast, reliable, and maintainable. My work spans the full stack—responsive frontends, robust APIs, cloud infrastructure, and CI/CD—so you get one partner from idea to launch.
                         </p>
                         <p class="about__text">
-                            I have led engineering teams at fast-growing startups and established enterprises, mentored junior and mid-level developers, and partnered closely with product and design to ship features that users love. I care deeply about code quality, system architecture, and creating inclusive engineering cultures.
+                            I've led engineering teams at startups and enterprises, mentored developers, and partnered with product and design to ship features users love. Whether you need a marketing site, a SaaS product, or a system rebuild, I care about code quality, clear architecture, and results you can measure.
                         </p>
                         <div class="about__stats">
                             <div class="about__stat">
@@ -122,6 +215,33 @@
                         </div>
                         <a href="#" class="btn btn--primary" download>Download Resume</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services" aria-labelledby="servicesTitle">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__subtitle">What I Offer</p>
+                    <h2 class="section__title" id="servicesTitle">Web Development Services</h2>
+                </div>
+                <p class="services__intro">
+                    Looking for a web developer? I partner with clients who need clear communication, solid engineering, and sites that perform.
+                </p>
+                <div class="services__list">
+                    <article class="services__item">
+                        <h3 class="services__item-title">Custom Website Development</h3>
+                        <p class="services__item-text">Marketing sites, portfolios, and business websites built for speed, accessibility, and search visibility.</p>
+                    </article>
+                    <article class="services__item">
+                        <h3 class="services__item-title">Full-Stack Web Applications</h3>
+                        <p class="services__item-text">Product UIs, dashboards, and backends with APIs, auth, and databases ready for real users.</p>
+                    </article>
+                    <article class="services__item">
+                        <h3 class="services__item-title">Cloud Architecture &amp; Performance</h3>
+                        <p class="services__item-text">Deployment, scaling, and optimization so your web app stays fast and reliable as traffic grows.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -367,9 +487,9 @@
                 </div>
                 <div class="contact__grid">
                     <div class="contact__info">
-                        <h3 class="contact__heading">Open to new opportunities</h3>
+                        <h3 class="contact__heading">Hire me for web development</h3>
                         <p class="contact__text">
-                            Whether you're looking for a senior engineer to lead a project, a technical advisor, or just want to connect, I'd love to hear from you.
+                            Need a website, web app, or technical partner? Tell me about your project—I'll reply with next steps and how we can work together.
                         </p>
                         <div class="contact__details">
                             <a href="mailto:alex.morgan@example.com" class="contact__detail">
@@ -422,6 +542,7 @@
             <nav class="footer__nav" aria-label="Footer navigation">
                 <a href="#home" class="footer__link">Home</a>
                 <a href="#about" class="footer__link">About</a>
+                <a href="#services" class="footer__link">Services</a>
                 <a href="#projects" class="footer__link">Projects</a>
                 <a href="#contact" class="footer__link">Contact</a>
             </nav>

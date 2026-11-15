@@ -744,6 +744,36 @@ a:not(.btn):not(.nav__link):not(.hero__social-link):not(.projects__card-link):no
 /* ============================================
    Skills Section
    ============================================ */
+/* ============================================
+   Services
+   ============================================ */
+.services__intro {
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 2.5rem;
+}
+
+.services__item-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.services__item-text {
+  color: var(--color-text-muted);
+  font-size: 0.975rem;
+  line-height: 1.65;
+}
+
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1340,7 +1370,8 @@ a:not(.btn):not(.nav__link):not(.hero__social-link):not(.projects__card-link):no
    ============================================ */
 @media (max-width: 1024px) {
   .skills__grid,
-  .education__grid {
+  .education__grid,
+  .services__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1469,7 +1500,8 @@ a:not(.btn):not(.nav__link):not(.hero__social-link):not(.projects__card-link):no
   }
 
   .skills__grid,
-  .education__grid {
+  .education__grid,
+  .services__list {
     grid-template-columns: 1fr;
   }
 

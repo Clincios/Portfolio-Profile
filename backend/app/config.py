@@ -27,9 +27,15 @@ class Settings(BaseSettings):
     mail_ssl_tls: bool = False
 
     cors_origins: str = "http://localhost:8000,http://127.0.0.1:8000"
+    # Public site origin for sitemap.xml / robots.txt (e.g. https://clintonage.com)
+    site_url: str = "https://YOUR-DOMAIN.com"
 
     access_token_expire_minutes: int = 60 * 24
     algorithm: str = "HS256"
+
+    @property
+    def public_site_url(self) -> str:
+        return self.site_url.rstrip("/")
 
     @field_validator("database_url", mode="before")
     @classmethod

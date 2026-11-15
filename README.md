@@ -95,9 +95,51 @@ If the static server is separate from the API, set the API base URL before other
 
 1. **Content** — Prefer the admin panel at `/admin`, or edit seed data and re-run `python -m scripts.seed` on a fresh DB.
 2. **Colors** — Update CSS variables at the top of `css/styles.css`.
-3. **Images** — Add files under `assets/images/` and set URLs in the admin panel.
+3. **Images** — Add files under `assets/images/` and set URLs in the admin panel. Add a `1200×630` `assets/images/og-image.jpg` for social / Google previews.
 4. **Resume** — Set `resume_url` on the Profile record.
 5. **Email** — Configure SMTP variables in `backend/.env` to receive contact notifications.
+6. **SEO domain** — Replace every `https://YOUR-DOMAIN.com` in `index.html` (and static `sitemap.xml` / `robots.txt` if you host without the API). Set `SITE_URL` in `.env` / Render so `/sitemap.xml` and `/robots.txt` use your live origin.
+
+## SEO, Search Console & Google Business Profile
+
+### On the site (already wired)
+
+- Meta title/description, canonical, Open Graph, Twitter cards, robots directives
+- JSON-LD for `Person`, `ProfessionalService`, and `WebSite`
+- `robots.txt` + `sitemap.xml` (served dynamically when FastAPI runs; static copies at repo root)
+- Services section + copy aimed at **your name** and **web development** searches
+
+### After you deploy
+
+1. Point a custom domain at your host (stronger for branding than `*.onrender.com`).
+2. Set `SITE_URL=https://your-domain.com` and update all `YOUR-DOMAIN.com` placeholders in `index.html`.
+3. Confirm `https://your-domain.com/robots.txt` and `/sitemap.xml` load.
+4. Upload `assets/images/og-image.jpg` (1200×630) with your name readable on it.
+
+### Google Search Console
+
+1. Open [Google Search Console](https://search.google.com/search-console) → **Add property** → Domain (preferred) or URL-prefix.
+2. Verify ownership (DNS TXT for domain, or HTML meta / file for URL-prefix).
+3. **Sitemaps** → submit `https://your-domain.com/sitemap.xml`.
+4. Use **URL Inspection** on the homepage → **Request indexing**.
+5. Track queries for your name and “web developer” / “web development” + your city over the next weeks.
+
+### Google Business Profile (local visibility)
+
+1. Create/claim a profile at [Google Business Profile](https://business.google.com) (or Google Maps → Add your business).
+2. Category ideas: **Website designer**, **Software company**, or **Internet marketing service** (pick the closest match; add secondary categories if offered).
+3. If you work from home / remotely: set as a **service-area business**, hide the street address if needed, and list cities you serve.
+4. Website field → your live portfolio URL. Keep name consistent with the site (**Clinton Age** / your legal business name).
+5. Add services matching the site (Custom website development, Full-stack web apps, etc.), hours, phone, and photos.
+6. Complete verification (postcard, phone, or email—Google’s flow varies).
+7. Ask happy clients for Google reviews; reply to every review.
+
+### Ongoing ranking tips
+
+- Keep LinkedIn / GitHub / other profiles linking to the same domain and spelling of your name.
+- Publish real projects with unique titles/descriptions (admin panel).
+- Avoid stuffing keywords; keep one clear H1 with your name (already set).
+- After major content changes, re-request indexing in Search Console.
 
 ## Docker (PostgreSQL)
 
@@ -120,6 +162,7 @@ This repo includes `render.yaml` (Web Service + Postgres) and a Docker build tha
 3. When prompted for sync’d env vars, set:
    - `ADMIN_PASSWORD` — strong password for `/admin`
    - `CORS_ORIGINS` — leave blank for the first deploy, then set to `https://<your-service>.onrender.com` and redeploy (or update after the URL is assigned)
+   - `SITE_URL` — same public origin, e.g. `https://<your-service>.onrender.com` or your custom domain (used by `/sitemap.xml` and `/robots.txt`)
    - `DATABASE_URL` is injected from the Blueprint Postgres service; paste Render’s URL as-is (`postgres://` or `postgresql://`) — the app rewrites it to `postgresql+psycopg2://`
 4. After deploy, open:
    - Site: `https://<your-service>.onrender.com`

@@ -1,0 +1,11 @@
+# Replace https://YOUR-DOMAIN.com with your live site URL before submitting to Google Search Console.
+User-agent: *
+Allow: /
+
+Disallow: /admin
+Disallow: /api/
+Disallow: /docs
+Disallow: /redoc
+Disallow: /openapi.json
+
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml

@@ -46,24 +46,24 @@ def seed() -> None:
             db.add(
                 Profile(
                     name="Clinton Age",
-                    title="Senior Software Engineer",
+                    title="Web Developer & Full-Stack Software Engineer",
                     tagline=(
-                        "I build scalable, high-performance web applications and lead "
-                        "engineering teams to deliver products that millions of people rely on."
+                        "I help businesses and founders with custom web development—fast, "
+                        "scalable websites and full-stack applications people rely on every day."
                     ),
-                    bio_heading="Senior Software Engineer with 10+ years of experience",
+                    bio_heading="Web developer & full-stack engineer with 10+ years of experience",
                     bio_paragraph_1=(
-                        "I specialize in designing and building large-scale web applications "
-                        "that are fast, reliable, and maintainable. My work spans the full stack, "
-                        "from responsive frontends and robust APIs to cloud infrastructure and "
-                        "CI/CD pipelines."
+                        "I'm Clinton Age, a web developer who designs and builds websites and "
+                        "large-scale web applications that are fast, reliable, and maintainable. "
+                        "My work spans the full stack—responsive frontends, robust APIs, cloud "
+                        "infrastructure, and CI/CD—so you get one partner from idea to launch."
                     ),
                     bio_paragraph_2=(
-                        "I have led engineering teams at fast-growing startups and established "
-                        "enterprises, mentored junior and mid-level developers, and partnered "
-                        "closely with product and design to ship features that users love. I care "
-                        "deeply about code quality, system architecture, and creating inclusive "
-                        "engineering cultures."
+                        "I've led engineering teams at startups and enterprises, mentored "
+                        "developers, and partnered with product and design to ship features users "
+                        "love. Whether you need a marketing site, a SaaS product, or a system "
+                        "rebuild, I care about code quality, clear architecture, and results you "
+                        "can measure."
                     ),
                     email="alex.morgan@example.com",
                     location="San Francisco, CA",
@@ -72,16 +72,16 @@ def seed() -> None:
                     linkedin_url="https://linkedin.com",
                     twitter_url="https://twitter.com",
                     typing_roles=(
-                        "Software Engineer,Full-Stack Developer,Cloud Architect,Engineering Lead"
+                        "Web Developer,Full-Stack Developer,Software Engineer,Cloud Architect"
                     ),
                     years_experience=10,
                     projects_shipped=50,
                     teams_led=8,
-                    initials="AM",
-                    contact_heading="Open to new opportunities",
+                    initials="CA",
+                    contact_heading="Hire me for web development",
                     contact_text=(
-                        "Whether you're looking for a senior engineer to lead a project, "
-                        "a technical advisor, or just want to connect, I'd love to hear from you."
+                        "Need a website, web app, or technical partner? Tell me about your "
+                        "project—I'll reply with next steps and how we can work together."
                     ),
                 )
             )

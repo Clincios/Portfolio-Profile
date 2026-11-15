@@ -7,6 +7,8 @@ RUN pip install --no-cache-dir -r /app/backend/requirements.txt
 
 COPY backend /app/backend
 COPY index.html /app/index.html
+COPY robots.txt /app/robots.txt
+COPY sitemap.xml /app/sitemap.xml
 COPY css /app/css
 COPY js /app/js
 COPY assets /app/assets
