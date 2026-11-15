@@ -1,5 +1,4 @@
-# Replace https://YOUR-DOMAIN.com with your live site URL before submitting to Google Search Console.
-User-agent: *
+﻿User-agent: *
 Allow: /
 
 Disallow: /admin
@@ -8,4 +7,4 @@ Disallow: /docs
 Disallow: /redoc
 Disallow: /openapi.json
 
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://portfolio-profile-p56d.onrender.com/sitemap.xml

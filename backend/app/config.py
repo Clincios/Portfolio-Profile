@@ -28,7 +28,7 @@ class Settings(BaseSettings):
 
     cors_origins: str = "http://localhost:8000,http://127.0.0.1:8000"
     # Public site origin for sitemap.xml / robots.txt (e.g. https://clintonage.com)
-    site_url: str = "https://YOUR-DOMAIN.com"
+    site_url: str = "https://portfolio-profile-p56d.onrender.com"
 
     access_token_expire_minutes: int = 60 * 24
     algorithm: str = "HS256"

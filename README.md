@@ -98,7 +98,7 @@ If the static server is separate from the API, set the API base URL before other
 3. **Images** — Add files under `assets/images/` and set URLs in the admin panel. Add a `1200×630` `assets/images/og-image.jpg` for social / Google previews.
 4. **Resume** — Set `resume_url` on the Profile record.
 5. **Email** — Configure SMTP variables in `backend/.env` to receive contact notifications.
-6. **SEO domain** — Replace every `https://YOUR-DOMAIN.com` in `index.html` (and static `sitemap.xml` / `robots.txt` if you host without the API). Set `SITE_URL` in `.env` / Render so `/sitemap.xml` and `/robots.txt` use your live origin.
+6. **SEO domain** — Live site: `https://portfolio-profile-p56d.onrender.com`. Keep `SITE_URL` on Render matched to that origin (or your custom domain later).
 
 ## SEO, Search Console & Google Business Profile
 
@@ -112,8 +112,8 @@ If the static server is separate from the API, set the API base URL before other
 ### After you deploy
 
 1. Point a custom domain at your host (stronger for branding than `*.onrender.com`).
-2. Set `SITE_URL=https://your-domain.com` and update all `YOUR-DOMAIN.com` placeholders in `index.html`.
-3. Confirm `https://your-domain.com/robots.txt` and `/sitemap.xml` load.
+2. Set `SITE_URL=https://portfolio-profile-p56d.onrender.com` on Render (already the code default).
+3. Confirm [robots.txt](https://portfolio-profile-p56d.onrender.com/robots.txt) and [sitemap.xml](https://portfolio-profile-p56d.onrender.com/sitemap.xml) load.
 4. Upload `assets/images/og-image.jpg` (1200×630) with your name readable on it.
 
 ### Google Search Console
